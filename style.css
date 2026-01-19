@@ -1,0 +1,41 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #111;
+    color: white;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.table {
+    display: grid;
+    grid-template-columns: repeat(18, 70px);
+    gap: 5px;
+    justify-content: center;
+}
+
+.element {
+    height: 70px;
+    border-radius: 6px;
+    padding: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Color Groups */
+.alkali { background: #ff6666; }
+.alkaline { background: #ffcc66; }
+.transition { background: #66ccff; }
+.post { background: #cccccc; color: black; }
+.metalloid { background: #66ff99; color: black; }
+.nonmetal { background: #99ffcc; color: black; }
+.halogen { background: #ff99ff; }
+.noble { background: #9999ff; }
+.lanthanide { background: #ff9966; }
+.actinide { background: #ff6699; }
