@@ -1,41 +1,93 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Colorful background */
 body {
-    font-family: Arial, sans-serif;
-    background: #111;
-    color: white;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea, #764ba2, #ff758c);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Contact box */
+.contact-container {
+    background: #ffffff;
+    padding: 35px;
+    width: 380px;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
     text-align: center;
 }
 
-h1 {
+.contact-container h2 {
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.contact-container p {
+    color: #777;
+    margin-bottom: 25px;
+}
+
+/* Form */
+.contact-form .input-group {
+    position: relative;
     margin-bottom: 20px;
 }
 
-.table {
-    display: grid;
-    grid-template-columns: repeat(18, 70px);
-    gap: 5px;
-    justify-content: center;
-}
-
-.element {
-    height: 70px;
-    border-radius: 6px;
-    padding: 5px;
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    outline: none;
     font-size: 14px;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+    resize: none;
 }
 
-/* Color Groups */
-.alkali { background: #ff6666; }
-.alkaline { background: #ffcc66; }
-.transition { background: #66ccff; }
-.post { background: #cccccc; color: black; }
-.metalloid { background: #66ff99; color: black; }
-.nonmetal { background: #99ffcc; color: black; }
-.halogen { background: #ff99ff; }
-.noble { background: #9999ff; }
-.lanthanide { background: #ff9966; }
-.actinide { background: #ff6699; }
+/* Floating labels */
+.contact-form label {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    color: #999;
+    font-size: 14px;
+    pointer-events: none;
+    transform: translateY(-50%);
+    transition: 0.3s;
+    background: #fff;
+    padding: 0 5px;
+}
+
+.contact-form input:focus + label,
+.contact-form textarea:focus + label,
+.contact-form input:valid + label,
+.contact-form textarea:valid + label {
+    top: -8px;
+    color: #764ba2;
+    font-size: 12px;
+}
+
+/* Button */
+.contact-form button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contact-form button:hover {
+    background: linear-gradient(135deg, #ff758c, #ff7eb3);
+}
